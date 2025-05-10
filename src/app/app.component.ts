@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  app_title = 'FEP Enrollment & Statistical Enrollment Allocation';
   
   constructor() {}
 
