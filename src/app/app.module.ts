@@ -16,6 +16,7 @@ import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TableModule } from 'primeng/table';
     MenubarModule,
     ButtonModule,
     TableModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync(),

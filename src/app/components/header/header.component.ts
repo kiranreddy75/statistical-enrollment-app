@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { AppServiceService } from '../../shared/services/app-service.service';
 
 @Component({
   selector: 'app-header',
@@ -13,9 +14,12 @@ export class HeaderComponent implements OnInit {
     loggedInUser = 'Venkat, Burri';
     items: MenuItem[] | undefined;
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private appService: AppServiceService) {}
 
     ngOnInit() {
+        this.appService.getData().subscribe((data) => {
+            console.log('Data from service:', data);
+        });
         this.items = [
             {
                 label: 'Home',
