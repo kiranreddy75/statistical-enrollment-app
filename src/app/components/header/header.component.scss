@@ -15,7 +15,7 @@
 }
 
 .logo-img {
-  height: 40px;
+  height: 100px;
 }
 
 .app-title {
@@ -43,4 +43,9 @@
 
 .logout-btn:hover {
   transition: background-color 0.3s ease;
+}
+
+:host ::ng-deep {
+  .p-menubar {
+  }
 }
