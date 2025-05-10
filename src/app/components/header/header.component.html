@@ -3,11 +3,11 @@
     <img src="/assets/images/logo.png" alt="App Logo" class="logo-img" />
   </div>
   <div class="app-title">
-    <h1>{{ app_title }}</h1>
+    <div>{{ app_title }}</div>
   </div>
   <div class="user-info">
-    <span class="user-name">Welcome, {{ loggedInUser }} <i class="pi pi-user"></i></span>
-    <p-button class="logout-btn" severity="info">Logout</p-button>
+    <span class="user-name">Welcome, {{ loggedInUser }} <i class="pi pi-user" style="margin-left: 10px;"></i></span>
+    <button class="logout-btn" severity="info">Logout</button>
   </div>
 </div>
 <p-menubar [model]="items">

@@ -4,22 +4,23 @@ import { MenuItem } from 'primeng/api';
 import { AppServiceService } from '../../shared/services/app-service.service';
 
 @Component({
-  selector: 'app-header',
-  standalone: false,
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'app-header',
+    standalone: false,
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
     app_title = 'FEP Enrollment & Statistical Enrollment Allocation';
-    loggedInUser = 'Venkat, Burri';
+    loggedInUser = 'UserFN, UserLN';
     items: MenuItem[] | undefined;
 
-    constructor(private router: Router, private appService: AppServiceService) {}
+    constructor(private router: Router, private appService: AppServiceService) { }
 
     ngOnInit() {
-        this.appService.getData().subscribe((data) => {
-            console.log('Data from service:', data);
-        });
+        this.createMenuItems();
+    }
+
+    private createMenuItems() {
         this.items = [
             {
                 label: 'Home',
@@ -46,6 +47,6 @@ export class HeaderComponent implements OnInit {
     }
 
     logout() {
-    console.log('User logged out');
-  }
+        console.log('User logged out');
+    }
 }
