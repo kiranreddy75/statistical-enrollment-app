@@ -1,0 +1,48 @@
+@import '../../../assets/styles/global-styles.scss';
+
+:host ::ng-deep {
+    .p-panel-header {
+        background-color: $primary-color;
+        color: $white-color;
+        font-family: $primary-font-family;
+        font-size: 16px;
+        font-weight: bold;
+        justify-content: center;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .p-panel-content-container {
+        padding-top: 15px;
+    }
+}
+
+.panel-container {
+    padding: 25px;
+}
+
+.grid-styles {
+    display: inline-flex; 
+    justify-content: space-around;
+    font-family: $primary-font-family;
+    font-size: 14px;
+    
+}
+
+.sys-admin-options-button {
+    padding: 10px 15px;
+    color: $white-color;
+    border: 1px solid $white-color;
+    background-color: $primary-color;
+    font-family: $primary-font-family;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+.sys-admin-options-button:hover {
+    transition: background-color 0.3s ease;
+    background-color: $white-color;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+}

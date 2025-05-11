@@ -1,16 +1,18 @@
+@import '../../../assets/styles/global-styles.scss';
+
 .footer-container {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f8f9fa;
+  background-color: $light-gray-color;
   text-align: center;
   padding: 10px 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $gray-color;
   font-size: 14px;
 }
 
 .copy-right-text {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #1E3A8A;
+  font-family: $primary-font-family;
+  color: $primary-color;
 }

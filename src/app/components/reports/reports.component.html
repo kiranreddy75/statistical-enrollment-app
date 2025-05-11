@@ -1,1 +1,73 @@
-<p>reports works!</p>
+<div class="panel-container">
+    <div class="card flex justify-center">
+        <p-stepper [value]="1" class="basis-[50rem]" [linear]="true">
+            <p-step-list>
+                <p-step [value]="1">Reports</p-step>
+                <p-step [value]="2">Enrollment Reports</p-step>
+                <p-step [value]="3">Download Reports</p-step>
+            </p-step-list>
+            <p-step-panels>
+                <p-step-panel [value]="1">
+                    <ng-template #content let-activateCallback="activateCallback">
+                        <div class="flex flex-col h-48">
+                            <div
+                                class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
+                                <button class="reports-button">{{'FEP Enrollment'}}</button>
+                                <button class="reports-button-disabled">{{'Monthly Report by Contract'}}</button>
+                                <button class="reports-button-disabled">{{'Monthly Report by Member'}}</button>
+                                <button class="reports-button-disabled">{{'YTD Report'}}</button>
+
+                            </div>
+                            <div class="flex pt-6 justify-end">
+                                <button class="reports-button-disabled">Next <li
+                                        class="pi pi-chevron-right"></li></button>
+                            </div>
+                        </div>
+                    </ng-template>
+                </p-step-panel>
+
+                <p-step-panel [value]="2">
+                    <ng-template #content let-activateCallback="activateCallback">
+                        <div class="flex flex-col h-48">
+                            <div
+                                class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
+                                <div>
+                                    <div class="flex flex-col gap-4">
+                                        <div *ngFor="let program of program_types" class="field-checkbox">
+                                            <p-radiobutton [inputId]="program.key" name="category" [value]="program"
+                                                [(ngModel)]="selectedProgram" />
+                                            <label [for]="program.key" class="ml-2">{{ program.name }}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex pt-6 justify-between">
+                            <button class="reports-button" (click)="activateCallback(1)">
+                                <li class="pi pi-chevron-left"></li> Back
+                            </button>
+                            <button class="reports-button" (click)="activateCallback(3)">Next <li
+                                    class="pi pi-chevron-right"></li></button>
+                        </div>
+                    </ng-template>
+                </p-step-panel>
+
+                <p-step-panel [value]="3">
+                    <ng-template #content let-activateCallback="activateCallback">
+                        <div class="flex flex-col h-48">
+                            <div
+                                class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
+                                Reports
+                            </div>
+                        </div>
+                        <div class="flex pt-6 justify-start">
+                            <button class="reports-button" (click)="activateCallback(2)">
+                                <li class="pi pi-chevron-left"></li> Back
+                            </button>
+                        </div>
+                    </ng-template>
+                </p-step-panel>
+            </p-step-panels>
+        </p-stepper>
+    </div>
+</div>

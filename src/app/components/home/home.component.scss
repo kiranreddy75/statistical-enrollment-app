@@ -1,27 +1,56 @@
+@import '../../../assets/styles/global-styles.scss';
+
 :host ::ng-deep {
     .p-datatable-gridlines .p-datatable-thead>tr>th {
-        background-color: #1E3A8A;
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: $primary-color;
+        color: $white-color;
+        font-family: $primary-font-family;
         font-size: 16px;
         font-weight: bold;
-        }
+    }
 
-    .p-datatable.p-datatable-gridlines:has(.p-datatable-thead):has(.p-datatable-tbody) .p-datatable-tbody > tr > td {
-        background-color: #fff;
-        color: #1E3A8A;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .p-datatable.p-datatable-gridlines:has(.p-datatable-thead):has(.p-datatable-tbody) .p-datatable-tbody>tr>td {
+        background-color: $white-color;
+        color: $secondary-color;
+        font-family: $primary-font-family;
         font-size: 14px;
         font-weight: normal;
+        justify-content: center;
+        border-radius: 12px 12px 0 0;
     }
+
+    .p-panel-header {
+        background-color: $primary-color;
+        color: $white-color;
+        font-family: $primary-font-family;
+        font-size: 16px;
+        font-weight: bold;
+        justify-content: center;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .p-panel-content-container {
+        padding-top: 15px;
+    }
+}
+
+.panel-container {
+    padding: 25px;
+}
+
+.grid-styles {
+    display: grid;
+    font-family: $primary-font-family;
+    font-size: 14px;
+
 }
 
 .request-access-button {
     padding: 10px 15px;
-    color: white;
-    border: 1px solid #fff;
-    background-color: #1E3A8A;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $white-color;
+    border: 1px solid $white-color;
+    background-color: $primary-color;
+    font-family: $primary-font-family;
     font-size: 14px;
     border-radius: 12px;
     cursor: pointer;
@@ -30,29 +59,35 @@
 
 .request-access-button:hover {
     transition: background-color 0.3s ease;
-    background-color: #fff;
-    color: #1E3A8A;
-    border: 1px solid #1E3A8A;
+    background-color: $white-color;
+    color: $primary-color;
+    border: 1px solid $primary-color;
 }
 
 .welcome-note {
-    color: #1D4ED8;
+    color: $secondary-color;
     font-size: 18px;
     padding: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: $primary-font-family;
     text-align: center;
 }
 
 .app-note {
-    color: #1D4ED8;
+    color: $secondary-color;
     font-size: 18px;
     padding: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: $primary-font-family;
     text-align: center;
 }
 
 .support-email {
-    color: #1E3A8A;
+    color: $primary-color;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.message-item {
+    font-family: $primary-font-family;
+    font-size: 14px;
+    color: $secondary-color;
 }

@@ -1,0 +1,62 @@
+@import '../../../assets/styles/global-styles.scss';
+
+:host ::ng-deep {
+    .pi-chevron-right {
+        font-size: 12px;
+    }
+
+    .pi-chevron-left {
+        font-size: 12px;
+    }
+
+    .p-step-active .p-step-title {
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 14px;
+        font-family: $primary-font-family;
+    }
+
+    .p-step-active .p-step-number {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+
+    .p-step:has(~ .p-step-active) .p-stepper-separator {
+        background-color: $primary-color
+    }
+}
+
+.panel-container {
+    padding: 25px;
+}
+
+.reports-button {
+    padding: 10px 15px;
+    color: $white-color;
+    border: 1px solid $white-color;
+    background-color: $primary-color;
+    font-family: $primary-font-family;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+.reports-button:hover {
+    transition: background-color 0.3s ease;
+    background-color: $white-color;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+}
+
+.reports-button-disabled {
+    padding: 10px 15px;
+    color: $white-color;
+    border: 1px solid $white-color;
+    background-color: $gray-color;
+    font-family: $primary-font-family;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: not-allowed;
+    margin: 10px 20px;
+}
