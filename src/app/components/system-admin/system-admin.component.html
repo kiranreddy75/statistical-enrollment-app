@@ -1,1 +1,12 @@
-<p>system-admin works!</p>
+<div  class="panel-container">
+    <div class="card flex justify-center">
+        <p-panel header="System Administration" [toggleable]="false">
+            <div class="grid-styles">
+                <div *ngFor="let item of ['User Maintainance', 'Messages', '
+            Create files for CA (Plans 041 and 542)', 'Lipload FER Enrollment Data']">
+                        <button class="sys-admin-options-button">{{item}}</button>
+                </div>
+            </div>
+        </p-panel>
+    </div>
+</div>

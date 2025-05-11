@@ -8,12 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  products: any[] = [];
+  user_plans: any[] = [];
+  user_messages : any[] = [
+    'You have 1 new message',
+    'You have 2 new messages',
+    'You have 3 new messages',
+  ];
 
   constructor() { }
 
   ngOnInit() {
-    this.products = [
+    this.user_plans = [
     {
       plan_name: '999FEP All Plans',
       plan_security_level: 'System Administrator',

@@ -9,6 +9,7 @@ import { AppServiceService } from '../../shared/services/app-service.service';
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
 })
+
 export class HeaderComponent implements OnInit {
     app_title = 'FEP Enrollment & Statistical Enrollment Allocation';
     loggedInUser = 'UserFN, UserLN';

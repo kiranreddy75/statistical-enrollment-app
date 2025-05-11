@@ -17,6 +17,9 @@ import Aura from '@primeng/themes/aura';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
+import { PanelModule } from 'primeng/panel';
+import { StepperModule } from 'primeng/stepper';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { HttpClientModule } from '@angular/common/http';
     MenubarModule,
     ButtonModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    PanelModule,
+    StepperModule,
+    RadioButtonModule
   ],
   providers: [
     provideAnimationsAsync(),
@@ -42,7 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
       theme: {
         preset: Aura,
         options: {
-            darkModeSelector: false || 'none'
+          darkModeSelector: false || 'none'
         }
       }
     })

@@ -41,6 +41,7 @@
             ],
             "styles": [
               "node_modules/primeicons/primeicons.css",
+              "src/assets/styles/global-styles.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -102,6 +103,7 @@
             ],
             "styles": [
               "node_modules/primeicons/primeicons.css",
+              "src/assets/styles/global-styles.scss",
               "src/styles.scss"
             ],
             "scripts": []

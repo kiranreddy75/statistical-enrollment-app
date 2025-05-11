@@ -5,8 +5,22 @@
 
     </div>
     <div>
-        <div class="card" style="padding: 25px;">
-            <p-table [value]="products" showGridlines [tableStyle]="{ 'min-width': '50rem' }">
+        <div class="panel-container">
+            <div class="card flex justify-center">
+                <p-panel header="FEPER Messages" [toggleable]="false">
+                    <div class="grid-styles">
+                        <div *ngFor="let user_message of user_messages" class="grid-item">
+                            <ul>
+                                <li class="message-item">{{ user_message }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </p-panel>
+            </div>
+        </div>
+    
+        <div class="panel-container">
+            <p-table [value]="user_plans" showGridlines [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template #header>
                     <tr>
                         <th>Plan Code Name</th>
