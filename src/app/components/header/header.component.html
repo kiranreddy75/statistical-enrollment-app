@@ -1,34 +1,17 @@
-<div class="header-container">
-  <div class="logo">
-    <img src="/assets/images/logo.png" alt="App Logo" class="logo-img" />
-  </div>
-  <div class="app-title">
-    <div>{{ app_title }}</div>
-  </div>
-  <div class="user-info">
-    <span class="user-name">Welcome, {{ loggedInUser }} <i class="pi pi-user"></i></span>
-    <button class="logout-btn" severity="info">Logout</button>
-  </div>
+<div>
+    <div class="header-container">
+        <div class="logo">
+            <img src="/assets/images/logo.png" alt="App Logo" class="logo-img" />
+        </div>
+        <div class="app-title">
+            <div>{{ app_title }}</div>
+        </div>
+        <div class="user-info">
+            <span class="user-name">Welcome, {{ loggedInUser }} <i class="pi pi-user"></i></span>
+            <button class="logout-btn" severity="info">Logout</button>
+        </div>
+    </div>
+    <div class="card">
+        <p-menubar [model]="items" />
+    </div>
 </div>
-<p-menubar [model]="items">
-    <ng-template  #item let-item>
-        <ng-container *ngIf="item.route; else urlRef">
-            <a [routerLink]="item.route" class="p-menubar-item-link">
-                <span [class]="item.icon"></span>
-                <span class="ml-5">{{ item.label }}</span>
-            </a>
-        </ng-container>
-        <ng-template #urlRef>
-            <a *ngIf="item.url; else noLink" [href]="item.url" class="p-menubar-item-link">
-                <span [class]="item.icon"></span>
-                <span class="ml-2">{{ item.label }}</span>
-            </a>
-        </ng-template>
-        <ng-template #noLink>
-            <div class="p-menubar-item-link">
-                <span [class]="item.icon"></span>
-                <span class="ml-2">{{ item.label }}</span>
-            </div>
-        </ng-template>
-    </ng-template>
-</p-menubar>

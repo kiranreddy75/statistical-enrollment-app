@@ -9,11 +9,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   user_plans: any[] = [];
-  user_messages : any[] = [
-    'You have 1 new message',
-    'You have 2 new messages',
-    'You have 3 new messages',
-  ];
+  user_messages : any[] = [];
 
   constructor() { }
 

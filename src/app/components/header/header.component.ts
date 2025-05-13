@@ -35,14 +35,66 @@ export class HeaderComponent implements OnInit {
                 icon: 'pi pi-user',
                 command: () => {
                     this.router.navigate(['/system-admin']);
-                }
+                },
+                items: [
+                    {
+                        label: 'User Maintainance',
+                        command: () => {
+                            this.router.navigate(['/system-admin']);
+                        }
+                    },
+                    {
+                        label: 'Messages',
+                        command: () => {
+                            this.router.navigate(['/system-admin']);
+                        }
+                    },
+                    {
+                        label: 'Create files for CA (Plans 041 and 542)',
+                        command: () => {
+                            this.router.navigate(['/system-admin']);
+                        }
+                    },
+                    {
+                        label: 'Lipload FER Enrollment Data',
+                        command: () => {
+                            this.router.navigate(['/system-admin']);
+                        }
+                    }
+                ]
             },
             {
                 label: 'Reports',
                 icon: 'pi pi-receipt',
                 command: () => {
                     this.router.navigate(['/reports']);
-                }
+                },
+                items: [
+                    {
+                        label: 'FEP Enrollment',
+                        command: () => {
+                            this.router.navigate(['/reports']);
+                        }
+                    },
+                    {
+                        label: 'Monthly Report by Contract',
+                        command: () => {
+                            this.router.navigate(['/reports']);
+                        }
+                    },
+                    {
+                        label: 'Monthly Report by Member',
+                        command: () => {
+                            this.router.navigate(['/reports']);
+                        }
+                    },
+                    {
+                        label: 'YTD Report',
+                        command: () => {
+                            this.router.navigate(['/reports']);
+                        }
+                    }
+                ]
             }
         ];
     }
