@@ -1,0 +1,57 @@
+<div class="panel-container">
+    <div class="card flex justify-center">
+        <p-panel header="FEP Enrollment Reports" [toggleable]="false">
+            <div style="display: flex; justify-content: space-evenly;">
+                <div class="program-type-container">
+                    <label for="programType">Program Type:</label>
+                    <p-radioButton name="programType" value="FEHB" [(ngModel)]="selectedProgramType" label="FEHB"
+                        inputId="fehb" [checked]="selectedProgramType === 'FEHB'">
+                    </p-radioButton>
+                    <label for="fehb">FEHB</label>
+                    <p-radioButton name="programType" value="PSHB" [(ngModel)]="selectedProgramType" label="PSHB"
+                        inputId="pshb">
+                    </p-radioButton>
+                    <label for="PSHB">PSHB</label>
+                </div>
+                <div style="margin-top: 20px; display: inline-flex;">
+                    <label for="reportType" style="margin-top: 10px;">Select Plan:</label>
+                    <div class="card flex justify-center">
+                        <p-select [options]="planType" [(ngModel)]="selectedPlanType" [checkmark]="true"
+                            optionLabel="name" [showClear]="true" placeholder="Select a City" class="w-full md:w-56" />
+                    </div>
+                </div>
+            </div>
+            <p-divider />
+            <div>
+                <label for="reportType" style="display: flex; justify-content: center; font-size: 16px; text-decoration: underline;
+                font-weight: bolder;">Select Report</label>
+                <div style="display: flex; justify-content: space-evenly;">
+                    <div *ngFor="let reportType of reportsTypes">
+                        <ul>
+                            <li class="report-type-list" (click)="selectedReportType = reportType.code">{{
+                                reportType.name }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p-divider />
+            <div *ngIf="selectedReportType">
+                <label for="reportType" style="display: flex; justify-content: center; font-size: 16px; text-decoration: underline;
+                font-weight: bolder;">Gains/Losses by Option by County Available</label>
+                <div style="display: flex; justify-content: space-evenly;">
+                    <div *ngFor="let reportType of reportsTypes">
+                        <ul>
+                            <li class="report-type-list" (click)="selectedReportType = reportType.code">{{
+                                reportType.name }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p-divider />
+            <div *ngIf="selectedReportType">
+                <label for="reportType" style="display: flex; justify-content: center; font-size: 16px; text-decoration: underline;
+                font-weight: bolder;">DISPLAY REPORTS HERE</label>
+            </div>
+        </p-panel>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reports',
@@ -7,16 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './reports.component.scss'
 })
 export class ReportsComponent implements OnInit {
-  constructor() {}
-
-  selectedProgram: any = null;
-
-    program_types: any[] = [
-        { name: 'FEHB', key: 'fehb' },
-        { name: 'PSHB', key: 'pshb' },
-    ];
+  constructor(private readonly router: Router) {}
 
     ngOnInit(): void {
-        this.selectedProgram = this.program_types[1];
+        // Initialization logic can go here
     }
+
+    navigateToFeature(feature: string) {
+        switch (feature) {
+            case 'FEP Enrollment':
+                this.router.navigate(['/fep-enrollment-reports']);
+                break;
+            // Add more cases for other features as needed
+            default:
+                console.error('Feature not recognized');
+        }
+    }
+
 }

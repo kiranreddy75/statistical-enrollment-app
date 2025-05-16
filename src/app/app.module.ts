@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenubarModule } from 'primeng/menubar';
@@ -19,7 +19,10 @@ import { TableModule } from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
 import { PanelModule } from 'primeng/panel';
 import { StepperModule } from 'primeng/stepper';
-import { RadioButtonModule } from 'primeng/radiobutton';
+import { FepEnrollmentReportsComponent } from './components/reports/fep-enrollment-reports/fep-enrollment-reports.component';
+import { RadioButton } from 'primeng/radiobutton';
+import { SelectModule } from 'primeng/select';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
   declarations: [
@@ -28,19 +31,23 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     FooterComponent,
     HomeComponent,
     SystemAdminComponent,
-    ReportsComponent
+    ReportsComponent,
+    FepEnrollmentReportsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    FormsModule,
     MenubarModule,
     ButtonModule,
     TableModule,
     HttpClientModule,
     PanelModule,
     StepperModule,
-    RadioButtonModule
+    RadioButton,
+    SelectModule,
+    DividerModule
   ],
   providers: [
     provideAnimationsAsync(),

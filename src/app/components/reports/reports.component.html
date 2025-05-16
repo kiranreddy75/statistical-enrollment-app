@@ -12,7 +12,7 @@
                         <div class="flex flex-col h-48">
                             <div
                                 class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
-                                <button class="reports-button">{{'FEP Enrollment'}}</button>
+                                <button class="reports-button" (click)="navigateToFeature('FEP Enrollment')">{{'FEP Enrollment'}}</button>
                                 <button class="reports-button-disabled">{{'Monthly Report by Contract'}}</button>
                                 <button class="reports-button-disabled">{{'Monthly Report by Member'}}</button>
                                 <button class="reports-button-disabled">{{'YTD Report'}}</button>
@@ -33,11 +33,6 @@
                                 class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">
                                 <div>
                                     <div class="flex flex-col gap-4">
-                                        <div *ngFor="let program of program_types" class="field-checkbox">
-                                            <p-radiobutton [inputId]="program.key" name="category" [value]="program"
-                                                [(ngModel)]="selectedProgram" />
-                                            <label [for]="program.key" class="ml-2">{{ program.name }}</label>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
